@@ -8,6 +8,7 @@ import (
 	"time"
 
 	_ "github.com/joho/godotenv/autoload"
+	"go.mongodb.org/mongo-driver/mongo"
 
 	"echo-mongodb-example/internal/database"
 )
@@ -15,7 +16,7 @@ import (
 type Server struct {
 	port int
 
-	db database.Service
+	db *mongo.Client
 }
 
 func NewServer() *http.Server {

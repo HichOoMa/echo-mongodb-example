@@ -28,5 +28,5 @@ func (s *Server) HelloWorldHandler(c echo.Context) error {
 }
 
 func (s *Server) healthHandler(c echo.Context) error {
-	return c.JSON(http.StatusOK, s.db.Health())
+	return c.JSON(http.StatusOK, "ok")
 }
